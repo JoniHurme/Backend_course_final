@@ -3,10 +3,7 @@ package org.backend.loppu.Controller;
 import org.backend.loppu.Model.Anturi;
 import org.backend.loppu.Repository.AnturiRepo;
 import org.backend.loppu.Service.AnturiService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,11 +23,10 @@ public class AnturiController {
     @GetMapping
     public List<Anturi> GetAll() {
         return anturiService.findAll();
-
     }
 
     @PostMapping
-    public Anturi addNewAnturi(Anturi anturi) {
+    public Anturi addNewAnturi(@RequestBody Anturi anturi) {
         return anturiService.addNewAnturi(anturi);
     }
 

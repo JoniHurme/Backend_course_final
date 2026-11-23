@@ -10,11 +10,36 @@ public class Anturi {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private boolean status;
+    private String name;
+    private String block;
+
+//    Getters and setters
     public void setId(Long id) {
         this.id = id;
     }
-
     public Long getId() {
         return id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setBlock(String block) {
+        this.block = block;
+    }
+    public String getBlock() {
+        return block;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+    public boolean getStatus() {
+        return status;
     }
 }

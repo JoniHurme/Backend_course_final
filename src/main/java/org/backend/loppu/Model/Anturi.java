@@ -23,10 +23,11 @@ public class Anturi {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = "anturi";
     }
     public String getName() {
-        return name;
+        String s = name + "_" + id;
+        return s;
     }
 
     public void setBlock(String block) {
